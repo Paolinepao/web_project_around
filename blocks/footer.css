@@ -1,0 +1,13 @@
+.footer {
+  margin: 67px 200px 0;
+  width: 318;
+  height: 18;
+  padding-bottom: 60px;
+}
+.footer__copy-right {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #545454;
+}

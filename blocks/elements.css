@@ -1,0 +1,38 @@
+.elements {
+  display: grid;
+  max-width: 880px;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px 17px;
+  margin: 0 auto;
+}
+.elements__contenedor {
+  max-width: 282;
+  max-height: 361;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.element__image {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.element__description {
+  display: flex;
+  margin: auto;
+  border-radius: 0 0 10px 10px;
+  padding: 25px 0 30px;
+}
+.element__description-title {
+  font-family: "Inter-Black";
+  color: black;
+  margin: auto;
+  margin-left: 21px;
+}
+.element__description-corazon {
+  padding-right: 18px;
+  align-items: end;
+}
+.element__description-corazon:hover {
+  opacity: 0.6;
+}
