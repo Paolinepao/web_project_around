@@ -9,3 +9,17 @@
   -webkit-user-select: none;
   font-family: "Inter";
 }
+@media screen and (max-width: 768px) {
+  .page {
+    max-width: 768px;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 412px) {
+  .page {
+    max-width: 412px;
+    width: 100%;
+    height: 100%;
+  }
+}

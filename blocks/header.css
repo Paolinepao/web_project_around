@@ -13,3 +13,17 @@
   height: 100%;
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  .header {
+    max-width: 768px;
+    padding: 50px 0 0 20px;
+    align-content: center;
+  }
+}
+@media screen and (max-width: 412px) {
+  .header {
+    max-width: 412px;
+    padding: 25px 0 0 15px;
+    align-content: center;
+  }
+}
