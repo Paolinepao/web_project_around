@@ -1,7 +1,7 @@
 .footer {
   margin: 67px 200px 0;
-  width: 318;
-  height: 18;
+  width: 318px;
+  height: 18px;
   padding-bottom: 60px;
 }
 .footer__copy-right {
@@ -14,16 +14,16 @@
 @media screen and (max-width: 768px) {
   .footer {
     margin: 60px 60px 0;
-    width: 318;
-    height: 18;
+    width: 318px;
+    height: 18px;
     padding-bottom: 60px;
   }
 }
 @media screen and (max-width: 412px) {
   .footer {
     margin: 50px 40px 0;
-    width: 318;
-    height: 18;
+    width: 318px;
+    height: 18px;
     padding-bottom: 60px;
   }
 }

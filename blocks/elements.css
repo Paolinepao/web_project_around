@@ -8,8 +8,8 @@
   margin: 0 auto;
 }
 .elements__contenedor {
-  max-width: 282;
-  max-height: 361;
+  max-width: 282px;
+  max-height: 361px;
   border-radius: 10px;
   background-color: #fff;
 }
