@@ -143,39 +143,41 @@
           </div>
         </section>
         <section class="popup">
-          <div class="popup__container">
-            <h3 class="popup__container-title">Editar perfil</h3>
-            <form class="popup__form">
-              <fieldset class="popup__form-fieldset">
-                <input
-                  type="text"
-                  id="popup__form-name"
-                  class="popup__form-input"
-                  name="name"
-                  placeholder="Nombre"
-                  required
+          <div class="popup__background">
+            <div class="popup__container">
+              <h3 class="popup__container-title">Editar perfil</h3>
+              <form class="popup__form">
+                <fieldset class="popup__form-fieldset">
+                  <input
+                    type="text"
+                    id="popup__form-name"
+                    class="popup__form-input"
+                    name="name"
+                    placeholder="Nombre"
+                    required
+                  />
+                  <input
+                    type="text"
+                    id="popup__form-about"
+                    class="popup__form-input"
+                    name="about"
+                    placeholder="Acerca de mi "
+                    required
+                  />
+                  <button type="submit" class="popup__form-btn-submit">
+                    Guardar
+                  </button>
+                </fieldset>
+              </form>
+              <button type="submit" class="popup__container-btn-close">
+                <img
+                  src="./images/Close-Iconx.svg"
+                  alt="cerrar ventana"
+                  class="popup__form-btn-close-image"
+                  id="popup__form_btn-close-image"
                 />
-                <input
-                  type="text"
-                  id="popup__form-about"
-                  class="popup__form-input"
-                  name="about"
-                  placeholder="Acerca de mi "
-                  required
-                />
-                <button type="submit" class="popup__form-btn-submit">
-                  Guardar
-                </button>
-              </fieldset>
-            </form>
-            <button type="submit" class="popup__container-btn-close">
-              <img
-                src="./images/Close-Iconx.svg"
-                alt="cerrar ventana"
-                class="popup__form-btn-close-image"
-                id="popup__form_btn-close-image"
-              />
-            </button>
+              </button>
+            </div>
           </div>
         </section>
       </main>
@@ -183,5 +185,6 @@
         <p class="footer__copy-right">&copy;2024 Around The U.S.</p>
       </footer>
     </div>
+    <script src="./pages/script.js"></script>
   </body>
 </html>

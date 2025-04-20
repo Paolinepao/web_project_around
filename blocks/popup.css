@@ -1,4 +1,10 @@
 .popup {
+  display: none;
+}
+.popup.active {
+  display: block;
+}
+.popup__background {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
@@ -69,4 +75,23 @@
   border: 0;
   top: -32.5px;
   right: -32.5px;
+}
+@media screen and (max-width: 768px) {
+  .popup__container {
+    box-sizing: border-box;
+    max-width: 282px;
+    width: 100%;
+  }
+  .popup__container-title {
+    font-size: 20px;
+    line-height: 100%;
+  }
+  .popup__container-btn-close {
+    max-width: 30px;
+    max-height: 30px;
+  }
+  .popup__form-btn-close-image {
+    max-width: 30px;
+    max-height: 30px;
+  }
 }

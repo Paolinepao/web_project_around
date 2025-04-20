@@ -1,30 +1,31 @@
-// Busquemos el formulario en el DOM
-let formElement = // Utiliza el método querySelector()
-
-// Lo siguiente es el manipulador (handler) de entrega de formularios, aunque
-// no se enviará en ningún sitio todavía
-
-// Observa que el nombre de la función comienza con un verbo
-// y describe exactamente lo que hace la función
-function handleProfileFormSubmit(evt) {
-    // Esta línea impide que el navegador
-    // entregue el formulario en su forma predeterminada.
-    evt.preventDefault();
-    // Una vez hecho esto, podemos definir nuestra propia forma de entregar el formulario.
-    // Lo explicaremos todo con más detalle después.
-
-    // Busquemos los campos del formulario en el DOM
-    let nameInput = // Utiliza el método querySelector()
-    let jobInput = // Utiliza el método querySelector()
-
-    // Obtén los valores de cada campo desde la propiedad de valor correspondiente
-
-    // Selecciona los elementos donde se introducirán los valores de los campos
-
-    // Inserta nuevos valores utilizando el textContent
-    // propiedad del método querySelector()
+//botones
+const buttonEdit = document.querySelector(".profile__buttom-lapiz");
+const buttonClose = document.querySelector(".popup__container-btn-close");
+//popup
+const popup = document.querySelector(".popup");
+//form
+const form = document.querySelector(".popup__form");
+const inputName = document.querySelector(".popup__form-input");
+const explorerName = document.querySelector(".profile__title");
+//funciones de popup abrir y cerrar
+function openPopup() {
+  popup.classList.add("active");
+}
+function closePopup() {
+  popup.classList.remove("active");
+}
+//funciones para llenar el formulario
+function handleSubmit(event) {
+  event.preventDefault();
+  const name = inputName.value;
+  explorerName.textContent = name;
+  inputName.value = " ";
+  closePopup();
 }
 
-// Conecta el manipulador (handler) al formulario:
-// se observará el evento de entrega
-formElement.addEventListener('submit', handleProfileFormSubmit);
+// click para abrir y cerrar el popup
+buttonEdit.addEventListener("click", openPopup);
+buttonClose.addEventListener("click", closePopup);
+
+//agregar evento de submit
+form.addEventListener("submit", handleSubmit);
