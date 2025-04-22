@@ -12,6 +12,7 @@
   max-height: 361px;
   border-radius: 10px;
   background-color: #fff;
+  margin: auto;
 }
 .elements__image {
   width: 100%;
@@ -38,11 +39,21 @@
 }
 @media screen and (max-width: 768px) {
   .elements {
+    width: 768px;
+    width: 100%;
     box-sizing: border-box;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     margin: 0;
     padding: 25px;
+  }
+  .elements__contenedor {
+    max-width: 346px;
+    max-height: 500px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 0;
+    width: 100%;
   }
 }
 @media screen and (max-width: 412px) {
@@ -51,6 +62,8 @@
     display: block;
   }
   .elements__contenedor {
+    max-width: 282px;
+    max-height: 360px;
     margin: 0 auto 16px;
   }
 }

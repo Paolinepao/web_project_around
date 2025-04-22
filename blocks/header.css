@@ -18,6 +18,7 @@
     max-width: 768px;
     padding: 50px 0 0 20px;
     align-content: center;
+    box-sizing: border-box;
   }
 }
 @media screen and (max-width: 412px) {
@@ -25,5 +26,13 @@
     max-width: 412px;
     padding: 25px 0 0 15px;
     align-content: center;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 320px) {
+  .elements {
+    box-sizing: border-box;
+    display: block;
+    box-sizing: border-box;
   }
 }
