@@ -51,98 +51,27 @@
           </div>
         </section>
         <section class="elements">
-          <div class="elements__contenedor">
-            <img
-              src="./images/valle-Yosemite.jpg"
-              alt="imagen del Valle Yosemite"
-              class="elements__image"
-            />
-            <div class="elements__description">
-              <h2 class="elements__description-title">Valle de Yosemite</h2>
+          <template id="cards-template">
+            <div class="elements__contenedor">
               <img
-                src="./images/corazon.svg"
-                alt="vector de un corazon"
-                class="elements__description-corazon"
+                src="./images/valle-Yosemite.jpg"
+                alt="imagen del Valle Yosemite"
+                class="elements__image"
               />
+              <button type="submit" class="elements__basurero">
+                <img src="./images/basurero.svg" alt="vector de un basurero" />
+              </button>
+              <div class="elements__description">
+                <h2 class="elements__description-title">Valle de Yosemite</h2>
+                <button
+                  type="submit"
+                  class="elements__description-corazon"
+                ></button>
+              </div>
             </div>
-          </div>
-          <div class="elements__contenedor">
-            <img
-              src="./images/Lago-Louise.png"
-              alt="imagen del Lago-Louise"
-              class="elements__image"
-            />
-            <div class="elements__description">
-              <h2 class="elements__description-title">Lago Louise</h2>
-              <img
-                src="./images/corazon.svg"
-                alt="vector de un corazon"
-                class="elements__description-corazon"
-              />
-            </div>
-          </div>
-          <div class="elements__contenedor">
-            <img
-              src="./images/Montanas-calvas.png"
-              alt="imagen de Montanas-calvas"
-              class="elements__image"
-            />
-            <div class="elements__description">
-              <h2 class="elements__description-title">Montañas Calvas</h2>
-              <img
-                src="./images/corazon.svg"
-                alt="vector de un corazon"
-                class="elements__description-corazon"
-              />
-            </div>
-          </div>
-          <div class="elements__contenedor">
-            <img
-              src="./images/Latemar.png"
-              alt="imagen de Latemar"
-              class="elements__image"
-            />
-            <div class="elements__description">
-              <h2 class="elements__description-title">Latemar</h2>
-              <img
-                src="./images/corazon.svg"
-                alt="vector de un corazon"
-                class="elements__description-corazon"
-              />
-            </div>
-          </div>
-          <div class="elements__contenedor">
-            <img
-              src="./images/Vanois-National.png"
-              alt="imagen de Vanois-National"
-              class="elements__image"
-            />
-            <div class="elements__description">
-              <h2 class="elements__description-title">Vanois National...</h2>
-              <img
-                src="./images/corazon.svg"
-                alt="vector de un corazon"
-                class="elements__description-corazon"
-              />
-            </div>
-          </div>
-          <div class="elements__contenedor">
-            <img
-              src="./images/Lago-diBraies.png"
-              alt="imagen del Lago-diBraies"
-              class="elements__image"
-            />
-            <div class="elements__description">
-              <h2 class="elements__description-title">Lago di Braies</h2>
-              <img
-                src="./images/corazon.svg"
-                alt="vector de un corazon"
-                class="elements__description-corazon"
-              />
-            </div>
-          </div>
+          </template>
         </section>
-        <section class="popup">
+        <div class="popup">
           <div class="popup__background">
             <div class="popup__container">
               <h3 class="popup__container-title">Editar perfil</h3>
@@ -179,7 +108,66 @@
               </button>
             </div>
           </div>
-        </section>
+        </div>
+        <div class="popup" id="popupcards">
+          <div class="popup__background">
+            <div class="popup__container">
+              <h3 class="popup__container-title">Nuevo lugar</h3>
+              <form class="popup__form" id="popupcards__form">
+                <fieldset class="popup__form-fieldset">
+                  <input
+                    type="text"
+                    id="popupcards__form-title"
+                    class="popup__form-input"
+                    name="name"
+                    placeholder="Título"
+                    required
+                  />
+                  <input
+                    type="text"
+                    id="popupcards__form-image"
+                    class="popup__form-input"
+                    name="about"
+                    placeholder="Enlace a la imagen"
+                    required
+                  />
+                  <button type="submit" class="popup__form-btn-submit">
+                    Crear
+                  </button>
+                </fieldset>
+              </form>
+              <button type="submit" class="popup__container-btn-close">
+                <img
+                  src="./images/Close-Iconx.svg"
+                  alt="cerrar ventana"
+                  class="popup__form-btn-close-image"
+                  id="popup__form_btn-close-image"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="popup__bigimage popup">
+          <div class="popup__bigimage-background">
+            <div class="popup__bigimage-contenedor">
+              <img
+                class="popup__image"
+                src="./images/yosemite.jpg"
+                alt="imagen de Latemar"
+                id="popup__bigimage-open"
+              />
+              <p class="popup__image-text"></p>
+              <button type="submit" class="popup__container-btn-close">
+                <img
+                  src="./images/Close-Iconx.svg"
+                  alt="cerrar ventana"
+                  class="popup__form-btn-close-image"
+                  id="popup__form_btn-close-image"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
       </main>
       <footer class="footer">
         <p class="footer__copy-right">&copy;2024 Around The U.S.</p>
