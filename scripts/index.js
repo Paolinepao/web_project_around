@@ -98,7 +98,7 @@ const initialCards = [
 
 //clonar tarjetas
 const allCards = document.querySelector(".elements");
-const cardsArea = document.querySelector("#cards-template").content;
+const cardsArea = document.querySelector("#cards-template");
 
 //función para clonar los elementos
 
@@ -125,15 +125,18 @@ function createCard(name, link) {
   cardImage.addEventListener("click", () => {
     openBigImagePopup(cardImage.dataset.image, cardImage.dataset.title);
   });
-  allCards.prepend(cloneCads);
+  allCards.prepend(clonCards);
 }
 initialCards.forEach((item) => {
   createCard(item.name, item.link);
 });
 
-const popupBigImage = document.querySelector("#popup__bigimage-open");
-const popupBigImageContainer = popupBigImage.querySelector(".popup__bigimage");
-const popupBigImageText = popupBigImage.querySelector(".popup__image-text");
+const popupBigImageContainer = document.querySelector(
+  ".popup__bigimage-contenedor"
+);
+const popupBigImage = popupBigImageContainer.querySelector(".popup__image");
+const popupBigImageText =
+  popupBigImageContainer.querySelector(".popup__image-text");
 
 function openBigImagePopup(imageLink, imageTitle) {
   popupBigImageContainer.src = imageLink;
@@ -147,34 +150,3 @@ const closeBigImageBtn = popupBigImage.querySelector(
 closeBigImageBtn.addEventListener("click", () => {
   popupBigImage.classList.remove("active");
 });
-
-/*
-//Selección de elementos
-const cardsArea = document.querySelector("#cardsArea");
-const cardsTemplate = document.querySelector("#cards-template").content;
-const cardsContenedor = document.querySelector(".cards__contenedor");
-
-//funcionalidad
-function createCard(cardData) {
-  //clonamos el template
-  const newNode = cardsTemplate.cloneNode(true);
-  //trabajamos el nuevo nodo (contenido de la card)
-  //selección de elementos
-  const cardsTitle = newNode.querySelector(".cards__description-title");
-  const cardsImage = newNode.querySelector(".cards__image");
-  //funcionalidad o manipulación del DOM
-  cardsTitle.textContent = cardData.name;
-  cardsImage.src = cardData.link;
-  cardsImage.alt = cardData.name;
-  return newNode;
-}
-function renderCards() {
-  //esto va a iterar 6 veces
-  initialCards.forEach((cardData) => {
-    //creación de la card, clonación
-    const card = createCard(cardData);
-    //añadimos la card ala DOM
-    cardsArea.appendChild(card);
-  });
-}
-renderCards();*/
