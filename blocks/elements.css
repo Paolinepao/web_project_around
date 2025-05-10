@@ -8,13 +8,6 @@
   padding: 20px;
   margin: 0 auto;
   box-sizing: border-box;
-  /*display: grid;
-  max-width: 880px;
-  width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px 17px;
-  margin: 0 auto;*/
 }
 .elements__contenedor {
   flex-direction: column;
@@ -23,20 +16,12 @@
   overflow: hidden;
   height: 100%;
   position: relative;
-  /* max-width: 282px;
-  max-height: 361px;
-  border-radius: 10px;
-  background-color: #fff;
-  margin: auto;
-  width: 100%;
-  position: relative;*/
 }
 .elements__image {
   width: 100%;
   height: 282px;
   object-fit: cover; /* Recorta la imagen si es muy vertical */
   display: block;
-
   /*width: 100%;
   border-radius: 10px 10px 0 0;
   height: 100%;*/
