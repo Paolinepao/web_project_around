@@ -92,7 +92,7 @@
 .popup__bigimage-contenedor {
   position: relative;
   justify-content: center;
-  max-width: 60vw;
+  max-width: 50vw;
 }
 .popup__image {
   width: 100%;
