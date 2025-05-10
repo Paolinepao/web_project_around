@@ -12,8 +12,10 @@ const aboutName = document.querySelector(".profile__subtitle");
 
 //funciones de popup abrir y cerrar
 function openPopup() {
-  inputName.value = explorerName.textContent;
-  inputAbout.value = aboutName.textContent;
+  //inputName.value = explorerName.textContent;
+  //inputAbout.value = aboutName.textContent;
+  inputName.value = "";
+  inputAbout.value = "";
   popup.classList.add("active");
 }
 function closePopup() {
@@ -43,8 +45,8 @@ const btnCloseImage = popupImage.querySelector(".popup__container-btn-close");
 
 //form
 const formImage = document.querySelector("#popupcards__form");
-const inputTitleImage = document.querySelector("#popupcards__form-title");
 const inputLinkImage = document.querySelector("#popupcards__form-image");
+const inputTitleImage = document.querySelector("#popupcards__form-title");
 const btnEnviarImage = popupImage.querySelector(".popup__form-btn-submit");
 
 //open popup 2
@@ -56,10 +58,10 @@ function closePopupImage() {
 }
 function handleSubmitImage(event) {
   event.preventDefault();
+  const urlImage = inputLinkImage.value;
   const titlePlaceImage = inputTitleImage.value;
-  const UrlImage = inputLinkImage.value;
   //Función clonar cards
-  createCard(titlePlaceImage, UrlImage);
+  createCard(titlePlaceImage, urlImage);
 
   closePopupImage();
 }
@@ -131,6 +133,24 @@ initialCards.forEach((item) => {
   createCard(item.name, item.link);
 });
 
+const popupBigImageContainer = document.querySelector(".popup__bigimage");
+const popupImagePhoto = document.querySelector("#popup__bigimage-open");
+const popupText = document.querySelector(".popup__image-text");
+const closeBtn = popupBigImageContainer.querySelector(
+  "#popup__form_btn-close-image"
+);
+
+function openBigImagePopup(imageLink, imageTitle) {
+  popupImagePhoto.src = imageLink;
+  popupText.textContent = imageTitle;
+  popupBigImageContainer.classList.add("active");
+}
+
+closeBtn.addEventListener("click", () => {
+  popupBigImageContainer.classList.remove("active");
+});
+
+/*
 const popupBigImageContainer = document.querySelector(
   ".popup__bigimage-contenedor"
 );
@@ -149,4 +169,4 @@ const closeBigImageBtn = popupBigImage.querySelector(
 );
 closeBigImageBtn.addEventListener("click", () => {
   popupBigImage.classList.remove("active");
-});
+});*/
